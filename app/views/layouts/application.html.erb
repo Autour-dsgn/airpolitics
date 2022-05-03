@@ -13,7 +13,15 @@
   </head>
 
   <body>
+    <div>
+    <%= render "layouts/navbar" %>
+
     <%= yield %>
+
+    <footer>
+      <%= render "layouts/footer" %>
+    </footer>
+    </div>
   </body>
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>

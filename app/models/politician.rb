@@ -1,2 +1,3 @@
 class Politician < ApplicationRecord
+
 end

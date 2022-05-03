@@ -3,6 +3,23 @@ class PoliticiansController < ApplicationController
     @politicians = Politician.all
   end
 
+  def show
+    @politician = Politician.find(params[:id])
+  end
+
+  def new
+    @politician = Politician.new
+  end
+
+  def create
+    @politician = Politician.new(politician_params)
+    if @politician.save
+      redirect_to root_path
+    else
+      render :new
+    end
+  end
+
   private
 
   def politician_params

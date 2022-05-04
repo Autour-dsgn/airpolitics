@@ -1,12 +1,11 @@
 // HOME SEARCH BAR
 
 .product-search {
-  margin-top: 90px;
   display: flex;
   align-items: center;
   background: white;
   border-radius: 5px;
-  margin: 0 auto;
+  margin-top: 160px;
   box-shadow: rgba(0, 0, 0, 0.04) 0 6px 12px 0;
   cursor: pointer;
 }
@@ -67,10 +66,12 @@
   margin-top: 90px;
   background-size: cover;
   background-position: center;
-  padding: 180px 0 180px 0;
+  padding: 150px 0;
   text-align: center;
   border-radius: 5px;
   box-shadow: rgba(0, 0, 0, 0.04) 0 6px 12px 0;
+  background-size: cover;
+  color: white;
 }
 
 .banner h1 {
@@ -111,6 +112,10 @@
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   border-radius: 5px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+.cards a {
+  color: white;
+  text-decoration: none;
 }
 
 // Smallest device

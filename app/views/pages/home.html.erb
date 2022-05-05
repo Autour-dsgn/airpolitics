@@ -1,40 +1,56 @@
-
-<div class="container-search">
-  <form novalidate="novalidate" class="simple_form search" action="/" accept-charset="UTF-8" method="get">
-    <div class="search-form-control form-group">
-      <input class="form-control string required" placeholder="Type de services" type="text" name="search[query]" id="search_query" />
-      <input class="form-control string required" placeholder="Lieu" type="text" name="search[query]" id="search_query" />
-      <input class="form-control string required" placeholder="Date début" type="text" name="search[query]" id="search_query" />
-      <input class="form-control string required" placeholder="Date de fin" type="text" name="search[query]" id="search_query" />
-      <button name="button" type="submit" class="btn btn-primary">
-        <i class="fas fa-search"></i> Search
-      </button>
+<!-- SEARCH BAR -->
+<div class="container">
+  <form action="" method="get">
+    <div class="product-search">
+        <div class="search-element">
+          <label class="search-label">Quel type de services souhaitez-vous ?</label>
+          <input class="search-input" type="text" autocomplete="on" placeholder="Services" name="query">
+        </div>
+        <div class="search-element">
+          <label class="search-label">Où ?</label>
+          <input class="search-input" type="text" placeholder="Pays" class="" autocomplete="on" name="location">
+        </div>
+            <div class="search-element">
+          <label class="search-label">Date de début</label>
+          <input class="search-input" type="text" placeholder="Quand ?" class="" autocomplete="on" name="location">
+        </div>
+            <div class="search-element">
+          <label class="search-label">Date de fin</label>
+          <input class="search-input" type="text" placeholder="Quand ?" class="" autocomplete="on" name="location">
+        </div>
+        <a type="submit" class="search-button">Rechercher</a>
     </div>
   </form>
 </div>
 
-<div class="container-banner">
+<!-- BANNER -->
+<div class="container">
   <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/background.png);">
     <div class="container">
-      <h1>Le Wagon brings <strong>tech skills</strong> to <strong>creative people</strong>!</h1>
-      <p>Change your life and learn to code at one of our campuses around the world.</p>
-      <a class="btn btn-primary" href="#">Find your politic</a>
+      <!-- Textes à mettre à jour -->
+      <h1>AirPolitics vous permet de louer des services uniques</h1>
+      <p>Grâce à cette application, défie toute personne osant se mettre sur votre chemin.</p>
+      <!-- Lien à mettre à jour -->
+      <a class="btn btn-primary" href="#">Trouve ton politique</a>
     </div>
   </div>
 </div>
 
+<!-- CARDS CATEGORY -->
 <div class="container">
   <div class="cards">
-    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
-      Breakfast
-    </div>
+    <!-- Titre + photo + lien à mettre à jour -->
+    <a href="#"><div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+      Catégorie 1
+    </div></a>
 
-    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/lunch.jpg)">
-      Lunch
-    </div>
+    <!-- Titre + photo + lien à mettre à jour -->
+    <a href="#"><div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+      Catégorie 2
+    </div></a>
 
-    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/dinner.jpg)">
-      Dinner
-    </div>
+    <a href="#"><div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+      Catégorie 3
+    </div></a>
   </div>
 </div>

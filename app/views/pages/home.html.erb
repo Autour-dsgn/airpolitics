@@ -10,12 +10,8 @@
           <label class="search-label">Où ?</label>
           <input class="search-input" type="text" placeholder="Pays" class="" autocomplete="on" name="location">
         </div>
-            <div class="search-element">
-          <label class="search-label">Date de début</label>
-          <input class="search-input" type="text" placeholder="Quand ?" class="" autocomplete="on" name="location">
-        </div>
-            <div class="search-element">
-          <label class="search-label">Date de fin</label>
+        <div class="search-element">
+          <label class="search-label">Date du rendez-vous</label>
           <input class="search-input" type="text" placeholder="Quand ?" class="" autocomplete="on" name="location">
         </div>
         <a type="submit" class="search-button">Rechercher</a>
@@ -25,13 +21,12 @@
 
 <!-- BANNER -->
 <div class="container">
-  <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/background.png);">
+  <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.5)), url('https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F58d952e3-9f3f-46a6-a785-88c7ddc16248.jpg?fit=scale-down&source=next&width=700')">
     <div class="container">
       <!-- Textes à mettre à jour -->
-      <h1>AirPolitics vous permet de louer des services uniques</h1>
-      <p>Grâce à cette application, défie toute personne osant se mettre sur votre chemin.</p>
-      <!-- Lien à mettre à jour -->
-      <a class="btn btn-primary" href="#">Trouve ton politique</a>
+      <h1>AirPolitics vous permet de louer des services politiques uniques</h1>
+      <p>Grâce à nos services, défiez toute personne osant se mettre sur votre chemin.</p>
+      <%= link_to "Trouve ton politique", politicians_path, class: "btn btn-primary" %>
     </div>
   </div>
 </div>
@@ -40,17 +35,71 @@
 <div class="container">
   <div class="cards">
     <!-- Titre + photo + lien à mettre à jour -->
-    <a href="#"><div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
-      Catégorie 1
+    <a href="#"><div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.6)), url('<%= cl_image_path "viacheslav-bublyk-6WXbPWhT8c8-unsplash_hjgtnb" %>')">
+      L'art de la fraude fiscale
     </div></a>
 
     <!-- Titre + photo + lien à mettre à jour -->
-    <a href="#"><div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
-      Catégorie 2
+    <a href="#"><div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.8)), url('<%= cl_image_path "manipulation_zk9oht" %>')">
+      L’art de la manipulation
     </div></a>
 
-    <a href="#"><div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
-      Catégorie 3
+    <a href="#"><div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('<%= cl_image_path "rhema-kallianpur-uocSnWMhnAs-unsplash_ae2qzq" %>')">
+      L'art de la séduction
     </div></a>
+  </div>
+</div>
+
+<!-- CARDS POLITICIANS -->
+<div class="container">
+  <div class="row row-cols-1 row-cols-md-2 g-4">
+    <div class="col">
+      <div class="card" id="global-card-politic">
+        <!-- URL à mettre à jour -->
+        <img src="https://www.moustique.be/wp-content/uploads/2022/04/methode_times_prod_web_bin_298872bc-bf21-11ec-8413-422ef6319ad0.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <!-- Elements à mettre à jour -->
+          <h5 class="card-title"><strong>Emmanuel Macron</strong></h5>
+          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+           <a href="#" class="btn btn-outline-primary btn-sm">En savoir plus</a>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card" id="global-card-politic">
+        <!-- URL à mettre à jour -->
+        <img src="https://www.moustique.be/wp-content/uploads/2022/04/methode_times_prod_web_bin_298872bc-bf21-11ec-8413-422ef6319ad0.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <!-- Elements à mettre à jour -->
+          <h5 class="card-title"><strong>Emmanuel Macron</strong></h5>
+          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+           <a href="#" class="btn btn-outline-primary btn-sm">En savoir plus</a>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card" id="global-card-politic">
+        <!-- URL à mettre à jour -->
+        <img src="https://www.moustique.be/wp-content/uploads/2022/04/methode_times_prod_web_bin_298872bc-bf21-11ec-8413-422ef6319ad0.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <!-- Elements à mettre à jour -->
+          <h5 class="card-title"><strong>Emmanuel Macron</strong></h5>
+          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+           <a href="#" class="btn btn-outline-primary btn-sm">En savoir plus</a>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card" id="global-card-politic">
+        <!-- URL à mettre à jour -->
+        <img src="https://www.moustique.be/wp-content/uploads/2022/04/methode_times_prod_web_bin_298872bc-bf21-11ec-8413-422ef6319ad0.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <!-- Elements à mettre à jour -->
+          <h5 class="card-title"><strong>Emmanuel Macron</strong></h5>
+          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+           <a href="#" class="btn btn-outline-primary btn-sm">En savoir plus</a>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

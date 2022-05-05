@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="form">
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <h3 id="formtitle">Inscrivez-vous pour pouvoir choisir votre politique</h3>
+          <%= simple_form_for @user do |f| %>
+            <p><strong>! ATTENTION ! SCHEMA A VERIFIER PAR RAPPORT A https://kitt.lewagon.com/db/59282</strong></p>
+            <%= f.input :email, placeholder: 'jdupont@me.com', label: "Email"%>
+            <%= f.button :submit, "Envoyer", class: "btn btn-primary", "data-disable-with" => "Envoie en cours.." %>
+          <% end %>
+      </div>
+    </div>
+  </div>
+</div>

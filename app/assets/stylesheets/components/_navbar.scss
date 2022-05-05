@@ -7,9 +7,12 @@
   // fixed
   background-color: white;
   transition: 0.5s background-color ease;
+  position: sticky;
+  top: 0;
+  z-index: 90;
   }
 
-w// fixed
+// fixed
 .navbar-lewagon-white {
   background-color: white;
 }
@@ -19,7 +22,8 @@ w// fixed
 }
 
 .navbar-lewagon .navbar-brand img {
-  width: 40px;
+  width: 150px;
+  margin-bottom: 5px;
 }
 
 #nav-btn {

@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="form">
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <h3 id="formtitle">Cher politique, proposez vos services sur AirPolitics</h3>
+          <%= simple_form_for @politician do |f| %>
+            <%= f.input :full_name, placeholder: 'Jean Dupont', label: "Prénom et nom" %>
+            <%= f.input :email, placeholder: 'jdupont@me.com', label: "Email"%>
+            <%= f.input :password, placeholder: '••••••••', label: "Mot de passe" %>
+            <%= f.input :phone_number, placeholder: '+33 6 23 36 32', label: "Téléphone" %>
+            <%= f.input :country, label: "Pays" %>
+            <%= f.input :address, placeholder: '13 avenue des Champs-Elysées', label: "Adresse" %>
+            <%= f.input :photo, as: :file %>
+            <!-- Element à ajouter à :photo > input_html: { accept: Politician::PHOTO } -->
+            <%= f.input :gender, label: "Sexe", collection: ["Femme", "Homme"] %>
+            <!-- Element à ajouter à :gender pour base de données? > collection: Politician::GENDER -->
+            <%= f.input :description, placeholder: 'Je propose mes services pour...', label: "Description", hint: "Soyez bref et précis !" %>
+            <%= f.input :political_camp, collection: ["Gauche", "Droite", "Les deux", "Ni l'un, ni l'autre", "Je ne sais pas"], label: "Orientation politique" %>
+            <!-- Element à ajouter à :political_camp pour base de données? > collection: Politician::POLITCAL_CAMP -->
+            <%= f.input :expertise, collection: ["L'art de la fraude", "L'art de la corruption", "L'art de la manipulation", "L'art de la guerre", "L'art de la séduction"], label: "Expertise(s)" %>
+            <!-- Element à ajouter à :expertise pour base de données? > collection: Politician::EXPERTISE -->
+            <%= f.input :price, input_html: { value: '124.99' } , label: "Tarif horaire (€)", append: "€" %>
+            <%= f.button :submit, "Envoyer", class: "btn btn-primary", "data-disable-with" => "Envoie en cours.." %>
+          <% end %>
+      </div>
+    </div>
+  </div>
+</div>

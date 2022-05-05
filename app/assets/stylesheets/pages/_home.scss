@@ -5,7 +5,7 @@
   align-items: center;
   background: white;
   border-radius: 5px;
-  margin-top: 160px;
+  margin-top: 90px;
   box-shadow: rgba(0, 0, 0, 0.04) 0 6px 12px 0;
   cursor: pointer;
 }
@@ -97,6 +97,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 16px;
+  margin-bottom: 90px;
 }
 
 .card-category {
@@ -151,4 +152,22 @@
   .cards {
     grid-template-columns: 1fr 1fr 1fr;
   }
+}
+
+// HOME POLITICIAN CARD
+.card-politics {
+  display: grid;
+  grid-gap: 16px;
+  background-size: cover;
+  background-position: center;
+}
+
+#global-card-politic {
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  background-color: white;
+}
+
+.card a {
+  margin-top: 0
 }

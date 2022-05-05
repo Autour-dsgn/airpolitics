@@ -1,6 +1,6 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon fixed-top" ata-controller="navbar" data-action="scroll@window->navbar#updateNavbar">
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon" data-controller="navbar" data-action="scroll@window->navbar#updateNavbar">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">
+    <a class="navbar-brand" href="<%= root_path %>">
       <!-- Logo à mettre à jour -->
       <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" />
     </a>
@@ -11,7 +11,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">
           <li class="nav-item active">
-            <a class="btn btn-outline-primary btn-sm" id="nav-btn" href="#">Proposez vos services</a>
+            <a class="btn btn-outline-primary btn-sm" id="nav-btn" href="<%= new_politician_path %>">Proposez vos services</a>
           </li>
           <li class="nav-item">
             <!-- Lien à mettre à jour / présence si login -->
@@ -22,10 +22,9 @@
             <img class="avatar dropdown-toggle" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="https://kitt.lewagon.com/placeholder/users/ssaunier" />
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
               <!-- Liens à mettre à jour / présence si non login -->
-              <a class="dropdown-item" href="#">Inscription</a>
-              <a class="dropdown-item" href="#">Connexionn</a>
+              <a class="dropdown-item" href="<%= new_user_path %>">Inscription</a>
+              <a class="dropdown-item" href="#">Connexion</a>
               <!-- Liens à mettre à jour / présence si login -->
-              <a class="dropdown-item" href="#">Dashboard</a>
               <a class="dropdown-item" href="#">Mes réservations</a>
               <a class="dropdown-item" href="#">Déconnexion</a>
             </div>

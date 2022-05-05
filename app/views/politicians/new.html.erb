@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-12 col-lg-6">
+      <%= simple_form_for @politician do |f| %>
+        <%= f.input :full_name %>
+        <%= f.input :email, placeholder: 'jdupont@me.com', label: "Email"%>
+        <%= f.input :password %>
+        <%= f.input :phone_number %>
+        <%= f.input :country %>
+        <%= f.input :address %>
+        <%= f.input :photo %>
+        <%= f.input :gender %>
+        <%= f.input :description %>
+        <%= f.input :political_camp %>
+        <%= f.input :expertise %>
+        <%= f.input :price %>
+        <%= f.button :submit %>
+      <% end %>
+    </div>
+  </div>
+</div>

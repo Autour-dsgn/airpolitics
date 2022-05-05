@@ -1,3 +1,5 @@
+<%= cl_image_tag("homepage_banner_uyg4ir_oaudt0")%>
+
 <!-- SEARCH BAR -->
 <div class="container">
   <form action="" method="get">
@@ -10,12 +12,8 @@
           <label class="search-label">Où ?</label>
           <input class="search-input" type="text" placeholder="Pays" class="" autocomplete="on" name="location">
         </div>
-            <div class="search-element">
-          <label class="search-label">Date de début</label>
-          <input class="search-input" type="text" placeholder="Quand ?" class="" autocomplete="on" name="location">
-        </div>
-            <div class="search-element">
-          <label class="search-label">Date de fin</label>
+        <div class="search-element">
+          <label class="search-label">Date du rendez-vous</label>
           <input class="search-input" type="text" placeholder="Quand ?" class="" autocomplete="on" name="location">
         </div>
         <a type="submit" class="search-button">Rechercher</a>
@@ -25,7 +23,7 @@
 
 <!-- BANNER -->
 <div class="container">
-  <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/background.png);">
+  <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= cl_image_path "homepage_banner_uyg4ir_oaudt0" %>')">
     <div class="container">
       <!-- Textes à mettre à jour -->
       <h1>AirPolitics vous permet de louer des services uniques</h1>

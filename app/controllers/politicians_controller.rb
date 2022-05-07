@@ -6,7 +6,8 @@ class PoliticiansController < ApplicationController
       {
         lat: politician.latitude,
         lng: politician.longitude,
-        info_window: render_to_string(partial: "info_window", locals: { politician: politician})
+        info_window: render_to_string(partial: "info_window", locals: { politician: politician}),
+        image_url: helpers.asset_url("politicien.png")
       }
     end
   end

@@ -4,8 +4,12 @@
       <div class="col-md-8">
         <h3 id="formtitle">Inscrivez-vous pour pouvoir choisir votre politique</h3>
           <%= simple_form_for @user do |f| %>
-            <p><strong>! ATTENTION ! SCHEMA A VERIFIER PAR RAPPORT A https://kitt.lewagon.com/db/59282</strong></p>
+            <%= f.input :full_name, placeholder: 'Jean Dupont', label: "Prénom et nom" %>
             <%= f.input :email, placeholder: 'jdupont@me.com', label: "Email"%>
+            <%= f.input :password, placeholder: '••••••••', label: "Mot de passe" %>
+            <%= f.input :phone_number, placeholder: '+33 6 69 02 30', label: "Téléphone" %>
+            <%= f.input :country, label: "Pays" %>
+            <%= f.input :gender, label: "Sexe", collection: ["Femme", "Homme"] %>
             <%= f.button :submit, "Envoyer", class: "btn btn-primary", "data-disable-with" => "Envoie en cours.." %>
           <% end %>
       </div>

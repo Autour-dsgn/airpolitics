@@ -1,3 +1,4 @@
-<h2><%= politician.full_name %></h2>
-<p> <%= politician.photo %></p>
-<p><%= politician.description %></p>
+<h5><strong><%= politician.full_name %></strong></h5>
+<p><%= cl_image_tag politician.photo.key, height: 100, width: 220, crop: :fill %></p>
+<p><strong>Expertise - </strong><%= politician.expertise %></p>
+<p><strong>Description</strong><br><%= politician.description %></p>

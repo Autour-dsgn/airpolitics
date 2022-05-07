@@ -9,7 +9,9 @@
             <%= f.input :password, placeholder: '••••••••', label: "Mot de passe" %>
             <%= f.input :phone_number, placeholder: '+33 6 23 36 32', label: "Téléphone" %>
             <%= f.input :country, label: "Pays" %>
-            <%= f.input :address, placeholder: '13 avenue des Champs-Elysées', label: "Adresse" %>
+            <%= f.input :address, placeholder: '13 avenue des Champs-Elysées', label: "Adresse"
+                        input_html: { data: { geocoder_target: "address" } },
+                        wrapper_html: { data: { controller: "geocoder", geocoder_api_key_value: ENV['MAPBOX_API_KEY'] } } %>
             <%= f.input :photo, as: :file %>
             <!-- Element à ajouter à :photo > input_html: { accept: Politician::PHOTO } -->
             <%= f.input :gender, label: "Sexe", collection: ["Femme", "Homme"] %>

@@ -1,6 +1,15 @@
 class PoliticiansController < ApplicationController
   def index
     @politicians = Politician.all
+
+    @markers = @politicians.geocoded.map do |politician|
+      {
+        lat: politician.latitude,
+        lng: politician.longitude,
+        info_window: render_to_string(partial: "info_window", locals: { politician: politician}),
+        image_url: helpers.asset_url("politicien.png")
+      }
+    end
   end
 
   def show

@@ -35,6 +35,7 @@ gem 'country_select'
 gem 'devise'
 gem 'faker'
 gem 'cloudinary', '~> 1.16.0'
+gem "geocoder"
 
 
 group :development, :test do

@@ -26,19 +26,19 @@ politician =Politician.create!(full_name:'Dominique Strauss Kahn', email:'domi@f
 politician.photo.attach(io: file, filename: 'dsk.jpg', content_type: 'image/jpg')
 
 file = URI.open('https://www.challenges.fr/assets/img/2016/11/19/cover-r4x3w1000-5830b338e2c9a-franc-ois-fillon-bio.jpg')
-politician =Politician.create!(full_name:'François Fillon', email:'franfran@gov.fr', password:'123', phone_number:'+32 3 62 38 56', country:'France', address:'5 rue des évadés fiscaux', gender:'Homme', description:'Je vous propose de vous accompagner afin de vous aider à détourner des fonds publics', political_camp:'Droite', expertise:'Art de la fraude', price:'129999')
+politician =Politician.create!(full_name:'François Fillon', email:'franfran@gov.fr', password:'123', phone_number:'+32 3 62 38 56', country:'France', address:'Manoir de Beaucé, 72300 Solesmes', gender:'Homme', description:'Je vous propose de vous accompagner afin de vous aider à détourner des fonds publics', political_camp:'Droite', expertise:'Art de la fraude', price:'129999')
 politician.photo.attach(io: file, filename: 'fillon.jpg', content_type: 'image/jpg')
 
 file = URI.open('https://ladaws-pm-prod.s3.amazonaws.com/var/partenaire/ifop/PhotosPrint/Chirac/SC_SIPA_00611138_000001.jpg')
-politician =Politician.create!(full_name:'Jacques Chirac', email:'chirac@gov.fr', password:'123', phone_number:'+32 6 94 72 53', country:'France', address:'32 rue des dragueurs fous', gender:'Homme', description:'Je vous propose de vous aider à apprendre à draguer une demoiselle discrètement, même lorsque votre épouse est dans les parages', political_camp:'Droite', expertise:'Art de la séduction', price:'133699')
+politician =Politician.create!(full_name:'Jacques Chirac', email:'chirac@gov.fr', password:'123', phone_number:'+32 6 94 72 53', country:'France', address:'4 rue de tournon 75006 paris', gender:'Homme', description:'Je vous propose de vous aider à apprendre à draguer une demoiselle discrètement, même lorsque votre épouse est dans les parages', political_camp:'Droite', expertise:'Art de la séduction', price:'133699')
 politician.photo.attach(io: file, filename: 'chirac.jpg', content_type: 'image/jpg')
 
 file = URI.open('https://ds.static.rtbf.be/article/image/1248x702/5/0/0/8e1ba5b251547dc7e82cdcd47bdc9f1b-1344186066.jpg')
-politician =Politician.create!(full_name:'Michel Daerden', email:'papamichmich@belgovino.be', password:'jaimelevin', phone_number:'+32 475 60 20 15', country:'Belgique', address:'Rue des Tchèrweûs 3', gender:'Homme', description:'Je vous propose une aisance oratoire. Vous oublierez votre stress (et peut-être votre discours) mais vous serez toujours avec un grand sourire à travers les médias.', political_camp:'Gauche', expertise:'Art de la séduction', price:'349,99')
+politician =Politician.create!(full_name:'Michel Daerden', email:'papamichmich@belgovino.be', password:'jaimelevin', phone_number:'+32 475 60 20 15', country:'Belgique', address:'Bruxelles', gender:'Homme', description:'Je vous propose une aisance oratoire. Vous oublierez votre stress (et peut-être votre discours) mais vous serez toujours avec un grand sourire à travers les médias.', political_camp:'Gauche', expertise:'Art de la séduction', price:'349,99')
 politician.photo.attach(io: file, filename: 'daerden.jpg', content_type: 'image/jpg')
 
 file = URI.open('https://www.leparisien.fr/resizer/YpaI9x9k1_2hrTsWszml3LcVetY=/622x346/arc-anglerfish-eu-central-1-prod-leparisien.s3.amazonaws.com/public/JSRO2SGAUYO3MJPACFIOPN5JZE.jpg')
-politician =Politician.create!(full_name:'Vladimir Poutine', email:'vlavla@gov.ru', password:'zelinsky', phone_number:'+7 417 119 169', country:'Russie', address:'103132 Moscow', gender:'Homme', description:'Mon armée peut veut aider à conquérir le pays de votre choix', political_camp:'Droite', expertise:'Art de la conquete', price:'1000000')
+politician =Politician.create!(full_name:'Vladimir Poutine', email:'vlavla@gov.ru', password:'zelinsky', phone_number:'+7 417 119 169', country:'Russie', address:'Moscou', gender:'Homme', description:'Mon armée peut veut aider à conquérir le pays de votre choix', political_camp:'Droite', expertise:'Art de la conquete', price:'1000000')
 politician.photo.attach(io: file, filename: 'poutine.jpg', content_type: 'image/jpg')
 
 file = URI.open('https://lesjours.fr/ressources/res840/square/people/coralie-dubost.jpeg')

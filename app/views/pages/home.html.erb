@@ -1,22 +1,19 @@
 <!-- SEARCH BAR -->
+
 <div class="container">
-  <form action="" method="get">
-    <div class="product-search">
-        <div class="search-element">
-          <label class="search-label">Quel type de services</label>
-          <input class="search-input" type="text" autocomplete="on" placeholder="Services" name="query">
-        </div>
-        <div class="search-element">
-          <label class="search-label">Lieu</label>
-          <input class="search-input" type="text" placeholder="Pays" class="" autocomplete="on" name="location">
-        </div>
-        <div class="search-element">
-          <label class="search-label">Date du rendez-vous</label>
-          <input class="search-input" type="text" placeholder="Quand ?" class="" autocomplete="on" name="location">
-        </div>
-        <a type="submit" class="search-button">Rechercher</a>
-    </div>
-  </form>
+<%= form_tag politicians_path, method: :get do %>
+  <%= text_field_tag :query,
+    params[:query],
+    class: "form-control",
+    placeholder: "Cherche une expertise"
+  %>
+  <%= text_field_tag :queryloc,
+    params[:queryloc],
+    class: "form-control",
+    placeholder: "Cherche un pays"
+  %>
+  <%= submit_tag "Search", class: "btn btn-primary" %>
+<% end %>
 </div>
 
 <!-- BANNER -->

@@ -1,6 +1,22 @@
 class PoliticiansController < ApplicationController
   def index
-    @politicians = Politician.all
+    if params[:query].present? && params[:queryloc].present?
+      sql_query = " \
+        politicians.expertise @@ :query \
+        AND politicians.country @@ :queryloc \
+      "
+      @politicians = Politician.where(sql_query, query: "%#{params[:query]}%", queryloc: "%#{params[:queryloc]}%")
+
+    elsif params[:query].present? || params[:queryloc].present?
+      sql_query = " \
+        politicians.expertise @@ :query \
+        OR politicians.country @@ :queryloc \
+      "
+      @politicians = Politician.where(sql_query, query: "%#{params[:query]}%", queryloc: "%#{params[:queryloc]}%")
+
+    else
+      @politicians = Politician.all
+    end
 
     @markers = @politicians.geocoded.map do |politician|
       {

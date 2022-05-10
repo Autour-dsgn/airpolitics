@@ -2,16 +2,21 @@
 
 .product-search {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   background: white;
   border-radius: 5px;
   margin-top: 90px;
-  box-shadow: rgba(0, 0, 0, 0.04) 0 6px 12px 0;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 6px 12px 0;
   cursor: pointer;
+  &:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  }
 }
 
 .search-element {
   display: flex;
+  flex: 1 1 150px;
   flex-grow: 20;
   flex-direction: column;
   border-right: 1px solid rgba(10,10,10,.1);
@@ -72,13 +77,16 @@
   box-shadow: rgba(0, 0, 0, 0.04) 0 6px 12px 0;
   background-size: cover;
   color: white;
+  &:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.4);
+  }
 }
 
 .banner h1 {
   margin: 0;
   color: white;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  font-size: 32px;
+  font-size: 28px;
   font-weight: bold;
 }
 
@@ -93,11 +101,15 @@
 // HOME CARDS CATEGORY
 
 .cards {
-  margin-top: 90px;
+  margin: 90px 0 90px 0;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 16px;
-  margin-bottom: 90px;
+  transition: 0.3s;
+  a {
+    color: white;
+    text-decoration: none
+  }
 }
 
 .card-category {
@@ -113,11 +125,11 @@
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   border-radius: 5px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  &:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.4);
+  }
 }
-.cards a {
-  color: white;
-  text-decoration: none;
-}
+
 
 // Smallest device
 @media (min-width: 100px) and (max-width: 575px) {
@@ -155,19 +167,62 @@
 }
 
 // HOME POLITICIAN CARD
-.card-politics {
-  display: grid;
-  grid-gap: 16px;
-  background-size: cover;
-  background-position: center;
-}
 
-#global-card-politic {
+.card-politicians {
   border-radius: 5px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   background-color: white;
+  display: grid;
+  grid-gap: 16px;
+  transition: 0.3s;
+  position: relative;
+  &:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.4);
+  }
+  h5 {
+    font-size: 22px;
+  }
+  a {
+    margin-top: 0;
+    text-decoration: none;
+    color: black;
+  }
+  .text-muted i {
+    margin: 0 10px;
+  }
+  img {
+    object-fit: cover;
+    height: 250px;
+    display: inline-block;
+    overflow: hidden;
+  }
+  #badge {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+  }
 }
 
-.card a {
-  margin-top: 0
+.card-icon {
+  display: flex;
+
+}
+
+.card-list {
+  padding: 15px 20px 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  font-size: 18px;
+  color: #0D6EFD;
+  border-top: 1px solid rgba(10, 10, 10, 0.1);
+  // background-color: #f6f5f5;
+  i {
+    font-size: 16px;
+
+  }
+}
+
+.card-body {
+  padding: 20px 18px 20px 20px;
 }

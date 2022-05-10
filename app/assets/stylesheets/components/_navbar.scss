@@ -10,6 +10,9 @@
   position: sticky;
   top: 0;
   z-index: 90;
+  &:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.05);
+  }
   }
 
 // fixed

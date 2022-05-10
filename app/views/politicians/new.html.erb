@@ -2,10 +2,10 @@
   <div class="form">
     <div class="row justify-content-center">
       <div class="col-md-8">
-        <h3 id="formtitle">Cher politique, proposez vos services sur AirPolitics</h3>
+        <h3 id="formtitle">Proposez vos services sur AirPolitics</h3>
           <%= simple_form_for @politician do |f| %>
-            <%= f.input :full_name, placeholder: 'Jean Dupont', label: "Prénom et nom" %>
-            <%= f.input :email, placeholder: 'jdupont@gov.com', label: "Email"%>
+            <%= f.input :full_name, placeholder: 'Jacques Chirac', label: "Prénom et nom" %>
+            <%= f.input :email, placeholder: 'jchirac@gov.com', label: "Email"%>
             <%= f.input :password, placeholder: '••••••••', label: "Mot de passe" %>
             <%= f.input :phone_number, placeholder: '+33 6 23 36 32', label: "Téléphone" %>
             <%= f.input :country, label: "Pays" %>

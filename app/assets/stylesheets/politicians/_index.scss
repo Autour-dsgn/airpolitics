@@ -85,3 +85,9 @@
 .card-body {
   padding: 20px 18px 20px 20px;
 }
+
+.content {
+  min-height: calc(100vh - 80px);
+  background-color: red;
+  width: 800px;
+}

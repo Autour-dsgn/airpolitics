@@ -10,4 +10,16 @@
 
 // Your CSS partials
 @import "components/index";
+@import "components/navbar";
+@import "components/footer";
+@import "components/alert";
+@import "components/avatar";
+@import "components/map";
+
+// HOMEPAGE
 @import "pages/index";
+@import "pages/new";
+@import "pages/home";
+
+// POLITICIANS
+@import "politicians/index"

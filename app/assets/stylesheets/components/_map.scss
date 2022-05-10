@@ -1,0 +1,24 @@
+.map {
+  height: 100vh;
+  //width: 100%;
+  position: sticky;
+  top: 0;
+}
+
+@media (min-width: 100px) and (max-width: 575) {
+  .maps {
+    display: none;
+  }
+}
+
+@media (min-width: 576px) {
+  .maps {
+    display: none;
+  }
+}
+
+@media (min-width: 1200px) {
+  .maps {
+    display: block;
+  }
+}

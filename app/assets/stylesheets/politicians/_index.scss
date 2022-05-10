@@ -1,0 +1,87 @@
+// .container {
+//  display: flex;
+// }
+
+//.cards {
+//  display: grid;
+//  grid-template-columns: 1fr 1fr;
+//  flex-grow: 1;
+//  grid-gap: 16px
+//}
+
+//@media (min-width: 100px) and (max-width: 575) {
+//  .cards {
+//    grid-template-columns: 1fr;
+//  }
+//}
+
+//@media (min-width: 576px) {
+//  .cards {
+//    grid-template-columns: 1fr;
+//  }
+//}
+
+//@media (min-width: 1200px) {
+//  .cards {
+//    grid-template-columns: 1fr 1fr;
+//  }
+//}
+
+.card-politicians {
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  background-color: white;
+  display: grid;
+  grid-gap: 16px;
+  transition: 0.3s;
+  position: relative;
+  &:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.4);
+  }
+  h5 {
+    font-size: 22px;
+  }
+  a {
+    margin-top: 0;
+    text-decoration: none;
+    color: black;
+  }
+  .text-muted i {
+    margin: 0 10px;
+  }
+  img {
+    object-fit: cover;
+    height: 250px;
+    display: inline-block;
+    overflow: hidden;
+  }
+  #badge {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+  }
+}
+
+.card-icon {
+  display: flex;
+
+}
+
+.card-list {
+  padding: 15px 20px 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  font-size: 18px;
+  color: #0D6EFD;
+  border-top: 1px solid rgba(10, 10, 10, 0.1);
+  // background-color: #f6f5f5;
+  i {
+    font-size: 16px;
+
+  }
+}
+
+.card-body {
+  padding: 20px 18px 20px 20px;
+}

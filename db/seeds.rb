@@ -18,11 +18,11 @@ politician =Politician.create!(full_name:'Emmanuel Macron', email:'manu@gov.fr',
 politician.photo.attach(io: file, filename: 'macron.jpg', content_type: 'image/jpg')
 
 file = URI.open('https://static.lpnt.fr/images/2012/10/19/berlusconi-proces-707198-jpg_486901_660x287.JPG')
-politician =Politician.create!(full_name:'Silvio Berlusconi', email:'Silvio-Berlusconi@gov.it', password:'ragazzo', phone_number:'+39 46 78 69 69', country:'Italie', address:'Viale della Trinità dei Monti, 1, 00187 Roma RM,', gender:'Homme', description:'Je vous trouve toutes les filles que vous voulez', political_camp:'droite', expertise:'Art de la séduction', price:'125000')
+politician =Politician.create!(full_name:'Silvio Berlusconi', email:'Silvio-Berlusconi@gov.it', password:'ragazzo', phone_number:'+39 46 78 69 69', country:'Italie', address:'Viale della Trinità dei Monti, 1, 00187 Roma RM,', gender:'Homme', description:'Je vous trouve toutes les filles que vous voulez', political_camp:'Droite', expertise:'Art de la séduction', price:'125000')
 politician.photo.attach(io: file, filename: 'berclusconi.jpg', content_type: 'image/jpg')
 
 file = URI.open('https://www.gala.fr/imgre/fit/http.3A.2F.2Fprd2-bone-image.2Es3-website-eu-west-1.2Eamazonaws.2Ecom.2Fprismamedia_people.2F2017.2F06.2F30.2F13cc903e-9db1-41a8-8d4d-07d705926fd0.2Ejpeg/340x340/quality/80/dominique-strauss-kahn.jpg')
-politician =Politician.create!(full_name:'Dominique Strauss Kahn', email:'domi@fmi.fr', password:'ladouchesofitel', phone_number:'+32 6 55 69 72 42', country:'France', address:'15 Rue Boissy Anglas', gender:'Homme', description:'Je vous accompagne dans la gestion de vos finances et également en conseil séduction', political_camp:'de gauche', expertise:'Art de la séduction', price:'1000000')
+politician =Politician.create!(full_name:'Dominique Strauss Kahn', email:'domi@fmi.fr', password:'ladouchesofitel', phone_number:'+32 6 55 69 72 42', country:'France', address:'15 Rue Boissy Anglas', gender:'Homme', description:'Je vous accompagne dans la gestion de vos finances et également en conseil séduction', political_camp:'  gauche', expertise:'Art de la séduction', price:'1000000')
 politician.photo.attach(io: file, filename: 'dsk.jpg', content_type: 'image/jpg')
 
 file = URI.open('https://www.challenges.fr/assets/img/2016/11/19/cover-r4x3w1000-5830b338e2c9a-franc-ois-fillon-bio.jpg')
@@ -38,9 +38,9 @@ politician =Politician.create!(full_name:'Michel Daerden', email:'papamichmich@b
 politician.photo.attach(io: file, filename: 'daerden.jpg', content_type: 'image/jpg')
 
 file = URI.open('https://www.leparisien.fr/resizer/YpaI9x9k1_2hrTsWszml3LcVetY=/622x346/arc-anglerfish-eu-central-1-prod-leparisien.s3.amazonaws.com/public/JSRO2SGAUYO3MJPACFIOPN5JZE.jpg')
-politician =Politician.create!(full_name:'Vladimir Poutine', email:'vlavla@gov.ru', password:'zelinsky', phone_number:'+7 417 119 169', country:'Russie', address:'Moscow, Russie, 103132', gender:'Homme', description:'Mon armée peut veut aider à conquérir le pays de votre choix', political_camp:'droite', expertise:'Art de la conquete', price:'1000000')
+politician =Politician.create!(full_name:'Vladimir Poutine', email:'vlavla@gov.ru', password:'zelinsky', phone_number:'+7 417 119 169', country:'Russie', address:'103132 Moscow', gender:'Homme', description:'Mon armée peut veut aider à conquérir le pays de votre choix', political_camp:'Droite', expertise:'Art de la conquete', price:'1000000')
 politician.photo.attach(io: file, filename: 'poutine.jpg', content_type: 'image/jpg')
 
 file = URI.open('https://lesjours.fr/ressources/res840/square/people/coralie-dubost.jpeg')
-politician =Politician.create!(full_name:'Coralie Dubos', email:'cocodudu@gov.fr', password:'millesrobes64', phone_number:'+32 7 65 59 72 42', country:'France', address:'57 rue de Varenne', gender:'Femme', description:'Amoureuse du shopping votre argent public ', political_camp:'Je sais pas', expertise:'Art de la fraude fiscale', price:'30000')
+politician =Politician.create!(full_name:'Coralie Dubos', email:'cocodudu@gov.fr', password:'millesrobes64', phone_number:'+32 7 65 59 72 42', country:'France', address:'57 rue de Varenne', gender:'Femme', description:'Amoureuse du shopping votre argent public ', political_camp:'Je ne sais pas', expertise:'Art de la fraude fiscale', price:'30000')
 politician.photo.attach(io: file, filename: 'coralie.jpg', content_type: 'image/jpg')

@@ -25,25 +25,36 @@
     </div>
   </div>
   <br>
+
   <div class="row">
-    <div class="col">
-      <div class="show-details">
-         <h4><strong>Réservez ce politicien </strong></h4>
-         <form action="">
-          <div class="input-group">
-            <span class="input-group-text" id="basic-addon1">Le</span>
-            <input type="text" class="form-control" placeholder="12/10/2017" aria-label="Username" aria-describedby="basic-addon1">
-          </div>
-          <input type="submit" value="Réservez" class="btn btn-primary mt-2">
-        </form>
+      <div class="col">
+        <div class="show-details">
+          <h4><strong>Réservez ce politicien </strong></h4>
+          <% if current_user.present? %>
+            <%= simple_form_for [ @politician, @booking ] do |f| %>
+              <%= f.input :date, html5: true %>
+              <%= f.submit "Submit review", class: "btn btn-primary" %>
+            <% end %>
+          <% else %>
+            Vous devez vous connecter pour réserver
+          <% end %>
+
+
+          <!-- <form action="">
+            <div class="input-group">
+              <span class="input-group-text" id="basic-addon1">Le</span>
+              <input type="text" class="form-control" placeholder="12/10/2017" aria-label="Username" aria-describedby="basic-addon1">
+            </div>
+            <input type="submit" value="Réservez" class="btn btn-primary mt-2">
+          </form> -->
+        </div>
       </div>
-    </div>
-    <div class="col">
-      <div class="show-details">
-        <h4><strong>Contactez-moi</strong></h4>
-        <p>Pour toutes informations supplémentaires, n'hésitez pas à me contacter.</p>
-        <%= mail_to @politician.email, "Envoyez un email", class: "btn btn-primary" %>
+      <div class="col">
+        <div class="show-details">
+          <h4><strong>Contactez-moi</strong></h4>
+          <p>Pour toutes informations supplémentaires, n'hésitez pas à me contacter.</p>
+          <%= mail_to @politician.email, "Envoyez un email", class: "btn btn-primary" %>
+        </div>
       </div>
-    </div>
   </div>
 </div>

@@ -1,19 +1,26 @@
 <!-- SEARCH BAR -->
-
 <div class="container">
-<%= form_tag politicians_path, method: :get do %>
-  <%= text_field_tag :query,
-    params[:query],
-    class: "form-control",
-    placeholder: "Cherche une expertise"
-  %>
-  <%= text_field_tag :queryloc,
-    params[:queryloc],
-    class: "form-control",
-    placeholder: "Cherche un pays"
-  %>
-  <%= submit_tag "Search", class: "btn btn-primary" %>
-<% end %>
+  <%= form_tag politicians_path, method: :get do %>
+    <div class="search-bar">
+      <div class="search-element">
+        <p>Quel type d'expertise ?</p>
+        <%= text_field_tag :query,
+          params[:query],
+          class: "form-control",
+          placeholder: "Fiscal, corruption, manipulation, séduction, conquête, ..."
+        %>
+       </div>
+      <div class="search-element">
+      <p>Dans quel pays ?</p>
+        <%= text_field_tag :queryloc,
+          params[:queryloc],
+          class: "form-control",
+          placeholder: "France"
+        %>
+       </div>
+      <%= submit_tag "Rechercher", class: "btn btn-primary" %>
+    </div>
+  <% end %>
 </div>
 
 <!-- BANNER -->

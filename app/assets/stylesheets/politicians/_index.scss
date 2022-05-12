@@ -5,10 +5,41 @@
 .cards-index {
   flex-grow: 1;
   background-color: white;
-  margin-bottom: 15px;
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  margin-bottom: 40px;
   .politicians-img {
   width: 100%;
   object-fit: cover;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  margin-bottom: 15px;
+  transition: 0.3s;
+  }
+  #badge-index {
+    margin-bottom: 15px;
+  }
+  &:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.4);
+    text-decoration: none;
+  }
+}
+
+.a-index {
+  text-decoration: none;
+  color:black;
+}
+
+.card-list-index {
+  padding-top: 10px;
+  padding-bottom: 0px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 17px;
+  color: #0D6EFD;
+  border-top: 1px solid rgba(10, 10, 10, 0.1);
+  i {
+    font-size: 14px;
   }
 }
 

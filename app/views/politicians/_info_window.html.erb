@@ -1,4 +1,6 @@
-<h5><strong><%= politician.full_name %></strong></h5>
+<h6><strong><%= politician.full_name %></strong></h6>
 <p><%= cl_image_tag politician.photo.key, height: 100, width: 220, crop: :fill %></p>
-<p><strong>Expertise - </strong><%= politician.expertise %></p>
+<div class="badge bg-primary text-wrap" style="width: 6rem;"><%= politician.expertise %></div>
+<br>
+<br>
 <p><strong>Description</strong><br><%= politician.description %></p>

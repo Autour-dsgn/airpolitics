@@ -1,18 +1,23 @@
 <div class="container index-container">
   <div class="row">
       <% @politicians.each do |politician| %>
-      <div class="col-6">
+      <div class="col-5">
         <div class="cards-index" style="width: 18rem;">
+       <%= link_to politician_path(politician), class: "a-index" do %>
           <% if politician.photo.attached? %>
-            <%= cl_image_tag politician.photo.key, class: "politicians-img", height: 150, crop: :fill %>
+            <%= cl_image_tag politician.photo.key, class: "politicians-img", height: 200, crop: :fill %>
           <% end %>
           <div class="card-body">
+              <div class="badge rounded-pill bg-primary" id="badge-index"><%= politician.expertise %></div>
               <h5 class="card-title"><strong><%= politician.full_name %></strong></h5>
-              <p class="card-text"><strong>Camp politique</strong><br><%= politician.political_camp %></p>
-              <p class="card-text"><strong>Offre de service</strong><br><%= politician.expertise %></p>
-              <p class="card-text"><strong>Tarif horaire</strong><br><%= politician.price %>€</p>
-              <%= link_to "En savoir plus", politician_path(politician), class: "btn btn-primary" %>
+              <div class="card-list-index">
+                <div>
+                <p><i class="fa-solid fa-star"></i> <strong>3,98</strong>/5</p>
+                </div>
+               <p><strong><%= politician.price %> €</strong>/h</p>
+              </div>
           </div>
+          <% end %>
         </div>
       </div>
     <% end %>

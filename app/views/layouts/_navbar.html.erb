@@ -14,7 +14,11 @@
           </li>
           <li class="nav-item">
             <!-- Lien à mettre à jour / présence si login -->
-            <a class="nav-link" href="#">Bonjour X</a>
+            <% if current_user.present? %>
+              <a class="nav-link" href="#">Bonjour <%= current_user.email %></a>
+            <% else %>
+              <a class="nav-link" href="#">Bonjour </a>
+            <% end %>
           </li>
           <li class="nav-item dropdown">
              <!-- Avatar à mettre à jour / présence si login -->
@@ -22,10 +26,10 @@
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
               <!-- Liens à mettre à jour / présence si non login -->
               <a class="dropdown-item" href="<%= new_user_path %>">Inscription</a>
-              <a class="dropdown-item" href="#">Connexion</a>
+              <a class="dropdown-item" href="<%= new_user_session_path%>">Connexion</a>
               <!-- Liens à mettre à jour / présence si login -->
-              <a class="dropdown-item" href="#">Mes réservations</a>
-              <a class="dropdown-item" href="#">Déconnexion</a>
+              <a class="dropdown-item" href="<%= my_bookings_path %>">Mes réservations</a>
+              <%= link_to "Déconnexion", destroy_user_session_path, method: :delete, class: "dropdown-item"%>
             </div>
           </li>
       </ul>

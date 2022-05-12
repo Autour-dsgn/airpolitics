@@ -30,6 +30,7 @@ class PoliticiansController < ApplicationController
 
   def show
     @politician = Politician.find(params[:id])
+    @booking = Booking.new
   end
 
   def new

@@ -1,26 +1,25 @@
-<div style="width: 100%; height: 500px;"
-  data-controller="mapbox"
-  data-mapbox-markers-value="<%= @markers.to_json %>"
-  data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
-</div>
-
-<div class="container">
-  <div class="row mt-5">
+<div class="container index-container">
+  <div class="row">
       <% @politicians.each do |politician| %>
-      <div class="col-4">
-        <div class="card" style="width: 18rem;">
+      <div class="col-6">
+        <div class="cards-index" style="width: 18rem;">
           <% if politician.photo.attached? %>
-            <%= cl_image_tag politician.photo.key, height: 150, width: 286, crop: :fill %>
+            <%= cl_image_tag politician.photo.key, class: "politicians-img", height: 150, crop: :fill %>
           <% end %>
           <div class="card-body">
               <h5 class="card-title"><strong><%= politician.full_name %></strong></h5>
               <p class="card-text"><strong>Camp politique</strong><br><%= politician.political_camp %></p>
               <p class="card-text"><strong>Offre de service</strong><br><%= politician.expertise %></p>
               <p class="card-text"><strong>Tarif horaire</strong><br><%= politician.price %>€</p>
-              <a href="#" class="btn btn-primary">En savoir plus</a>
+              <%= link_to "En savoir plus", politician_path(politician), class: "btn btn-primary" %>
           </div>
         </div>
       </div>
     <% end %>
+  </div>
+  <div class="map-index"
+    data-controller="mapbox"
+    data-mapbox-markers-value="<%= @markers.to_json %>"
+    data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
   </div>
 </div>

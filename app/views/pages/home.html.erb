@@ -39,9 +39,11 @@
 <div class="container">
   <div class="cards">
     <!-- Titre + photo + lien à mettre à jour -->
-    <a href="#"><div class="card-category" style="background-image: linear-gradient(rgba(6,56,128,0.3),rgba(0,0,0,0.6)), url('https://i.ibb.co/kxxtcgz/fraude.jpg')">
-      Art de la fraude fiscale
-    </div></a>
+     <%= link_to politicians_path(query: "fraude") do%>
+      <div class="card-category" style="background-image: linear-gradient(rgba(6,56,128,0.3),rgba(0,0,0,0.6)), url('https://i.ibb.co/kxxtcgz/fraude.jpg')">
+        Art de la fraude fiscale
+      </div>
+    <% end %>
 
     <!-- Titre + photo + lien à mettre à jour -->
     <a href="#"><div class="card-category" style="background-image: linear-gradient(rgba(6,56,128,0.4),rgba(0,0,0,0.8)), url('https://i.postimg.cc/523X1Lg8/manipulation.png')">

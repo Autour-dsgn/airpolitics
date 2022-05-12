@@ -22,7 +22,7 @@ politician =Politician.create!(full_name:'Silvio Berlusconi', email:'Silvio-Berl
 politician.photo.attach(io: file, filename: 'berclusconi.jpg', content_type: 'image/jpg')
 
 file = URI.open('https://www.gala.fr/imgre/fit/http.3A.2F.2Fprd2-bone-image.2Es3-website-eu-west-1.2Eamazonaws.2Ecom.2Fprismamedia_people.2F2017.2F06.2F30.2F13cc903e-9db1-41a8-8d4d-07d705926fd0.2Ejpeg/340x340/quality/80/dominique-strauss-kahn.jpg')
-politician =Politician.create!(full_name:'Dominique Strauss Kahn', email:'domi@fmi.fr', password:'ladouchesofitel', phone_number:'+32 6 55 69 72 42', country:'France', address:'15 Rue Boissy Anglas', gender:'Homme', description:'Je vous accompagne dans la gestion de vos finances et également en conseil séduction', political_camp:'  gauche', expertise:'Art de la séduction', price:'1000000')
+politician =Politician.create!(full_name:'Dominique Strauss Kahn', email:'domi@fmi.fr', password:'ladouchesofitel', phone_number:'+32 6 55 69 72 42', country:'France', address:'15 Rue Boissy Anglas', gender:'Homme', description:'Je vous accompagne dans la gestion de vos finances et également en conseil séduction', political_camp:'Gauche', expertise:'Art de la séduction', price:'1000000')
 politician.photo.attach(io: file, filename: 'dsk.jpg', content_type: 'image/jpg')
 
 file = URI.open('https://www.challenges.fr/assets/img/2016/11/19/cover-r4x3w1000-5830b338e2c9a-franc-ois-fillon-bio.jpg')

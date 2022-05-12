@@ -12,11 +12,14 @@ class BookingsController < ApplicationController
   end
 
   def create
+    @politician = Politician.find(params[:politician_id])
     @booking = Booking.new(booking_params)
+    @booking.politician = @politician
+    @booking.user = current_user
     if @booking.save
-      redirect_to root_path
+      redirect_to my_bookings_path
     else
-      render :new
+      render 'politicians/show'
     end
   end
 

@@ -33,7 +33,7 @@
               <a class="dropdown-item" href="<%= my_bookings_path %>">Mes réservations</a>
               <%= link_to "Déconnexion", destroy_user_session_path, method: :delete, class: "dropdown-item"%>
               <% else %>
-              <a class="dropdown-item" href="<%= new_user_path %>">Inscription</a>
+              <a class="dropdown-item" href="<%= new_user_registration_path %>">Inscription</a>
               <a class="dropdown-item" href="<%= new_user_session_path%>">Connexion</a>
               <% end %>
 

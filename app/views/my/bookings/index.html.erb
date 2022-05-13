@@ -1,10 +1,21 @@
+
+<%# Finir codage de la vue du booking %>
+
 <div class="container d-flex">
+  <h1>Vos réservations</h1>
   <div class="my-bookings"></div>
     <div class="row">
+      <% @bookings.each do |booking| %>
       <div class="col">
-        <h2>Vos réservations</h2>
-        <%= current_user.bookings.count %>
+        <% if booking.politician.photo.attached? %>
+            <%= cl_image_tag booking.politician.photo.key, class: "politicians-img", height: 200, crop: :fill %>
+          <% end %>
+        <%= booking.date %>
+        <%= booking.politician.full_name %>
+        <%= booking.politician.address %>
+<%# rajouter phrase sympa du politique %>
       </div>
+      <% end %>
     </div>
   </div>
 </div>

@@ -15,7 +15,7 @@
           <li class="nav-item">
             <!-- Lien à mettre à jour / présence si login -->
             <% if current_user.present? %>
-              <a class="nav-link" href="#"><%= current_user.full_name %></a>
+              <a class="nav-link" href="#"><%= current_user.email %></a>
             <% else %>
               <a class="nav-link" href="#"> </a>
             <% end %>
@@ -28,7 +28,10 @@
               <a class="dropdown-item" href="<%= new_user_path %>">Inscription</a>
               <a class="dropdown-item" href="<%= new_user_session_path%>">Connexion</a>
               <!-- Liens à mettre à jour / présence si login -->
+              <% if current_user.present? %>
               <a class="dropdown-item" href="<%= my_bookings_path %>">Mes réservations</a>
+              <% else %>
+              <% end %>
               <%= link_to "Déconnexion", destroy_user_session_path, method: :delete, class: "dropdown-item"%>
             </div>
           </li>

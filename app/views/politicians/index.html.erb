@@ -10,6 +10,7 @@
           <div class="card-body">
               <div class="badge rounded-pill bg-primary" id="badge-index"><%= politician.expertise %></div>
               <h5 class="card-title"><strong><%= politician.full_name %></strong></h5>
+              <p><%= politician.description.truncate(48)%></p>
               <div class="card-list-index">
                 <div>
                 <p><i class="fa-solid fa-star"></i> <strong>3,98</strong>/5</p>

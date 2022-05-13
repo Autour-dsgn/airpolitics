@@ -1,2 +1,10 @@
-<h2>Vos réservations</h2>
-<%= current_user.bookings.count %>
+<div class="container d-flex">
+  <div class="my-bookings"></div>
+    <div class="row">
+      <div class="col">
+        <h2>Vos réservations</h2>
+        <%= current_user.bookings.count %>
+      </div>
+    </div>
+  </div>
+</div>

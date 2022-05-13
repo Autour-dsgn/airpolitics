@@ -31,7 +31,7 @@
           <% if current_user.present? %>
             <%= simple_form_for [ @politician, @booking ] do |f| %>
               <%= f.input :date, html5: true %>
-              <%= f.submit "Submit review", class: "btn btn-primary" %>
+              <%= f.submit "Réserver", class: "btn btn-primary" %>
             <% end %>
           <% else %>
             Vous devez vous <a class="link-politic-show" href="<%= new_user_session_path%>"><strong>connecter</strong></a> ou à vous <a class="link-politic-show" href="<%= new_user_path %>"><strong>inscrire</strong></a> sur AirPolitics pour réserver ce politique.

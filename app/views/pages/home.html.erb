@@ -7,7 +7,7 @@
         <%= text_field_tag :query,
           params[:query],
           class: "form-control",
-          placeholder: "Fiscal, corruption, manipulation, séduction, conquête, ..."
+          placeholder: "Fraude fiscale, manipulation, séduction, guerre, ..."
         %>
        </div>
       <div class="search-element">
@@ -74,13 +74,13 @@
             <div class="card-body">
               <!-- Elements à mettre à jour -->
               <h5 class="card-title"><strong><%= politician.full_name %></strong></h5>
-              <p class="card-text"><%= politician.description.truncate(50)%></p>
+              <p class="card-text"><%= politician.description.truncate(70)%></p>
             </div>
           <div class="card-list">
             <div>
               <p><i class="fa-solid fa-star"></i> <strong><%= politician.average_rating %></strong> / 5</p>
             </div>
-              <p><strong><%= politician.price %> €</strong> / h</p>
+              <p><strong><%= politician.price.to_i %> €</strong> / h</p>
           </div>
         </div>
         <%end %>

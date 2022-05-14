@@ -15,7 +15,7 @@
                 <div>
                 <p><i class="fa-solid fa-star"></i> <strong><%=politician.average_rating%></strong>/5</p>
                 </div>
-               <p><strong><%= politician.price %> €</strong>/h</p>
+               <p><strong><%= politician.price.to_i %> €</strong>/h</p>
               </div>
           </div>
           <% end %>

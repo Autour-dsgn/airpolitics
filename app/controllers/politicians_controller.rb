@@ -30,6 +30,12 @@ class PoliticiansController < ApplicationController
 
   def show
     @politician = Politician.find(params[:id])
+    @markers = [{
+      lat: @politician.latitude,
+      lng: @politician.longitude,
+      info_window: render_to_string(partial: "info_window", locals: { politician: @politician}),
+      image_url: helpers.asset_url("politicien.png")
+    }]
     @booking = Booking.new
     @review = Review.new
   end

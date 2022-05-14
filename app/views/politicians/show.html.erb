@@ -38,6 +38,26 @@
           <% end %>
         </div>
 
+        <div class="show-details">
+          <h4><strong>Avis</strong></h4>
+          <% if current_user.present? %>
+            <%= simple_form_for [ @politician, @review ] do |f| %>
+              <%= f.input :rating, as: :float, input_html: { min: '0', max: '5', step: 'any' } %>
+              <%= f.input :comment %>
+              <%= f.submit "Envoyer", class: "btn btn-primary" %>
+            <% end %>
+          <% else %>
+            Vous devez vous <a class="link-politic-show" href="<%= new_user_session_path%>"><strong>connecter</strong></a> ou à vous <a class="link-politic-show" href="<%= new_user_path %>"><strong>inscrire</strong></a> sur AirPolitics pour réserver ce politique.
+          <% end %>
+        </div>
+
+        <div class="show-details">
+         <% @politician.reviews.each do |review|%>
+          <%= review.rating %>
+          <p><%= review.comment %></p>
+          <% end %>
+        </div>
+
         <div class="show-details-map">
           <div class="map-show"
             data-controller="mapbox"

@@ -15,15 +15,16 @@
   </head>
 
   <body>
-    <div>
-    <%= render "layouts/navbar" %>
 
-    <%= yield %>
+    <%= render "layouts/navbar" %>
+      <div class="content-wapper">
+      <%= yield %>
+      </div>
 
     <footer>
       <%= render "layouts/footer" %>
     </footer>
-    </div>
+
   </body>
 
   <p class="notice"><%= notice %></p>

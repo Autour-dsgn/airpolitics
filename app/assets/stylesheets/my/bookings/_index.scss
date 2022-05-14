@@ -1,0 +1,45 @@
+.booking-container {
+  display: flex;
+}
+
+.booking-name {
+  padding-bottom: 10px;
+}
+
+.booking-politicians {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cards-booking {
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  margin-bottom: 40px;
+  position: relative;
+  width: 18rem;
+
+
+  .politicians-img {
+    width: 288px;
+    object-fit: cover;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    margin-bottom: 15px;
+    }
+
+  #badge-index {
+    position: absolute;
+    top: 105px;
+    left: 20px;
+  }
+  &:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.4);
+    text-decoration: none;
+    color: black;
+  }
+  i {
+    font-size: 18px;
+    padding-right: 5px;
+  }
+}

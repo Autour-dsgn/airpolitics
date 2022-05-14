@@ -1,21 +1,22 @@
+<div class="container booking-container">
+  <div class="row">
+    <h3 id="formtitle">Vos réservations</h3>
 
-<%# Finir codage de la vue du booking %>
-
-<div class="container d-flex">
-  <h1>Vos réservations</h1>
-  <div class="my-bookings"></div>
-    <div class="row">
-      <% @bookings.each do |booking| %>
-      <div class="col">
-        <% if booking.politician.photo.attached? %>
-            <%= cl_image_tag booking.politician.photo.key, class: "politicians-img", height: 200, crop: :fill %>
+      <div class="booking-politicians">
+        <% @bookings.each do |booking| %>
+          <%= link_to politician_path(booking.politician), class: "a-index" do %>
+          <div class="cards-booking">
+            <%= cl_image_tag booking.politician.photo.key, class: "politicians-img", height: 120, crop: :fill %>
+            <div class="card-body">
+              <div class="badge rounded-pill bg-primary" id="badge-index"><%= booking.politician.expertise %></div>
+              <h5 class="booking-name"><strong><%= booking.politician.full_name %></strong></h5>
+              <p><i class="fa-solid fa-calendar-check"></i>  <%= booking.date %>
+              <p><i class="fa-solid fa-location-dot"></i>  <%= booking.politician.address %>
+            </div>
+          </div>
           <% end %>
-        <%= booking.date %>
-        <%= booking.politician.full_name %>
-        <%= booking.politician.address %>
-<%# rajouter phrase sympa du politique %>
+        <% end %>
       </div>
-      <% end %>
-    </div>
+
   </div>
 </div>

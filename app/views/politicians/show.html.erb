@@ -11,9 +11,20 @@
         <div class="details">
           <div>
             <!-- RATING A METTRE A JOUR -->
-            <p><i class="fa-solid fa-star"></i> <strong>3,98</strong> / 5</p>
+            <p><i class="fa-solid fa-star"></i> <strong><%=@politician.average_rating%></strong> / 5</p>
           </div>
           <p><strong><%= @politician.price %>€</strong> / h</p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <div class="show-details-map">
+          <div class="map-show"
+            data-controller="mapbox"
+            data-mapbox-markers-value="<%= @markers.to_json %>"
+            data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+          </div>
         </div>
       </div>
     </div>
@@ -57,16 +68,7 @@
           <p><%= review.comment %></p>
           <% end %>
         </div>
-
-        <div class="show-details-map">
-          <div class="map-show"
-            data-controller="mapbox"
-            data-mapbox-markers-value="<%= @markers %>"
-            data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
-          </div>
-        </div>
       </div>
-
   </div>
 </div>
 

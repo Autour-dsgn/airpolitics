@@ -19,7 +19,9 @@ export default class extends Controller {
     this.#fitMapToMarkers()
   }
   _addMarkersToMap() {
+    console.log("toto");
     this.markersValue.forEach((marker) => {
+      console.log(marker)
       const popup = new mapboxgl.Popup().setHTML(marker.info_window)
       const customMarker = document.createElement("div")
         customMarker.className = "marker"

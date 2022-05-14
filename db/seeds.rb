@@ -8,7 +8,8 @@
 
 require 'open-uri'
 
-puts "Detroying all politicians"
+puts "Detroying all Table"
+
 Booking.destroy_all
 Review.destroy_all
 Politician.destroy_all

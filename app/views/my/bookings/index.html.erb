@@ -4,6 +4,7 @@
 
       <div class="booking-politicians">
         <% @bookings.each do |booking| %>
+          <%= link_to politician_path(booking.politician), class: "a-index" do %>
           <div class="cards-booking">
             <%= cl_image_tag booking.politician.photo.key, class: "politicians-img", height: 120, crop: :fill %>
             <div class="card-body">
@@ -11,10 +12,9 @@
               <h5 class="booking-name"><strong><%= booking.politician.full_name %></strong></h5>
               <p><i class="fa-solid fa-calendar-check"></i>  <%= booking.date %>
               <p><i class="fa-solid fa-location-dot"></i>  <%= booking.politician.address %>
-              <a href="#" class="btn btn-outline-primary btn-sm">Plus d'info</a>
-              <%= link_to "cliquer", politician_path(booking.politician), class: "a-index" %>
             </div>
           </div>
+          <% end %>
         <% end %>
       </div>
 

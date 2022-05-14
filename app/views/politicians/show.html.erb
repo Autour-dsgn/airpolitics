@@ -10,8 +10,7 @@
         <p><%= @politician.description %></p>
         <div class="details">
           <div>
-            <!-- RATING A METTRE A JOUR -->
-            <p><i class="fa-solid fa-star"></i> <strong><%=@politician.average_rating%></strong> / 5</p>
+            <p><i class="fa-solid fa-star"></i> <strong><%= @politician.average_rating %></strong> / 5</p>
           </div>
           <p><strong><%= @politician.price %>€</strong> / h</p>
         </div>
@@ -31,11 +30,6 @@
   </div>
   <div class="row">
       <div class="col">
-        <div class="show-details">
-          <h4><strong>Contact</strong></h4>
-          <p>Pour toutes informations supplémentaires, n'hésitez pas à contacter ce politique.</p>
-          <%= mail_to @politician.email, "Envoyez un email", class: "btn btn-primary" %>
-        </div>
 
         <div class="show-details">
           <h4><strong>Réservation</strong></h4>
@@ -50,6 +44,12 @@
         </div>
 
         <div class="show-details">
+          <h4><strong>Contact</strong></h4>
+          <p>Pour toutes informations supplémentaires, n'hésitez pas à contacter ce politique.</p>
+          <%= mail_to @politician.email, "Envoyez un email", class: "btn btn-primary" %>
+        </div>
+
+        <div class="show-details">
           <h4><strong>Avis</strong></h4>
           <% if current_user.present? %>
             <%= simple_form_for [ @politician, @review ] do |f| %>
@@ -60,14 +60,23 @@
           <% else %>
             Vous devez vous <a class="link-politic-show" href="<%= new_user_session_path%>"><strong>connecter</strong></a> ou à vous <a class="link-politic-show" href="<%= new_user_path %>"><strong>inscrire</strong></a> sur AirPolitics pour réserver ce politique.
           <% end %>
-        </div>
-
-        <div class="show-details">
-         <% @politician.reviews.each do |review|%>
-          <%= review.rating %>
-          <p><%= review.comment %></p>
-          <% end %>
-        </div>
+          <br>
+          <br>
+          <div>
+          <% if @politician.reviews.present? %>
+            <h6><strong>Les avis laissés par les précédents utilisateurs :</strong></h6>
+            <% @politician.reviews.each do |review| %>
+            <div class="reviews">
+              <div>
+                <p><i class="fa-solid fa-star"></i> <strong><%= review.rating %></strong> / 5</p>
+              </div>
+              <p><%= review.comment %></p>
+            </div>
+            <% end %>
+            <% else %>
+            <p><strong>Il n'y a pas encore d'avis client sur ce politique.</strong></p>
+            <% end %>
+          </div>
       </div>
   </div>
 </div>

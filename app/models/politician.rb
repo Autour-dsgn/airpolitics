@@ -8,6 +8,6 @@ class Politician < ApplicationRecord
 
   def average_rating
     ratings = reviews.map(&:rating)
-    ratings.sum.fdiv(ratings.count)
+    ratings.sum.fdiv(ratings.count).round(1)
   end
 end
